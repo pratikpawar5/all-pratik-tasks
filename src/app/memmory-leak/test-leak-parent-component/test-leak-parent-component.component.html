@@ -1,0 +1,22 @@
+
+<div class="container">
+  <h2>Test Memory Leak in Angular</h2>
+  <button class="btn btn-primary mr-1" (click)="start()">Start Observble</button>
+  <button class="btn btn-danger" (click)="stop()">Stop Observble</button>
+  <!-- to check memory leak in angular 
+    steps as follows:
+  1] goto chrome inspect element
+  2] click on straight 3 line dot 
+  3] click on more tools
+  4] click on performance monitor
+  -->
+  <!-- Observations:
+1.I clicked on the start observable button
+2.I clicked the start observable button and the console is printing the timer value
+3.I clicked on the stop observable button and still console is printing. Isn’t it suppose to stop once clicked on the stop observable button? -->
+ 
+<!-- <app-test-leak-child *ngIf="observableLive"></app-test-leak-child> --> 
+
+  <app-test-fix-child *ngIf="observableLive"></app-test-fix-child>
+</div>
+

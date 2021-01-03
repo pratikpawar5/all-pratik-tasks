@@ -1,0 +1,12 @@
+<h1>
+  *ngFor TrackBy
+</h1>
+<table>
+  <tr *ngFor="let arr of myArray;let i=index;trackBy:trackItem">
+    <td>
+      <input type="text" [value]="myArray[i]">
+    </td>
+  </tr>
+</table>
+<button (click)="reveres()" style="margin:20px">reverse</button>
+<button (click)="addValue()">Add</button>
